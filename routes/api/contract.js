@@ -63,7 +63,7 @@ router.post(
   '/create', authenticateToken,
   async (req, res) => {
 
-    const { wallet, name, symbol, amount, price, url, type, contractAddress, contentImageUrl, chains, trusted} = req.body;
+    const { wallet, name, symbol, amount, price, url, type, contractAddress, contentImageUrl, chains, trusted, mint} = req.body;
 
     const opts = {
       overwrite: true,
@@ -97,7 +97,8 @@ router.post(
         type,
         contractAddress,
         chains,
-        trusted
+        trusted,
+        mint
       });
 
       await contractContent.save();
@@ -118,7 +119,8 @@ router.post(
         type,
         contractAddress,
         chains,
-        trusted
+        trusted,
+        mint
       });
 
       await contractContent.save();

@@ -25,10 +25,7 @@ const ContractSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  contractAddress: {
-    type: String,
-    required: true,
-  },
+  contractAddress: [],
   wallet: {
     type: String,
     required: true,
@@ -38,6 +35,7 @@ const ContractSchema = new mongoose.Schema({
   },
   chains: [],
   trusted: [],
+  mint: [],
   date: {
     type: Date,
     default: Date.now
