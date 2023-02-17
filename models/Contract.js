@@ -37,6 +37,7 @@ const ContractSchema = new mongoose.Schema({
     type: String,
   },
   chains: [],
+  trusted: [],
   date: {
     type: Date,
     default: Date.now
